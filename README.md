@@ -1,16 +1,50 @@
-# React + Vite
+# CJL Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal developer portfolio built with React and Vite.
 
-Currently, two official plugins are available:
+The portfolio presents my projects, technologies, learning progress, development notes, experiments, and selected work through an interactive workspace-style interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+* Bento-style workspace layout
+* Project showcase with detailed project information
+* Live demo and GitHub links
+* Technology stack
+* Learning progress
+* Development notes
+* Playground / Lab for experiments and practice projects
+* Contact section
+* Light and dark theme
+* Responsive layout
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+* React
+* Vite
+* JavaScript
+* CSS
+* Lucide React
+* React Icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Project Structure
+
+```text
+src/
+├── components/
+├── pages/
+├── data/
+├── App.jsx
+├── main.jsx
+└── index.css
+
+public/
+├── projects/
+├── lab/
+├── favicon.svg
+└── resume.pdf
+```
+
+## Status
+
+Actively maintained and updated as I continue building projects and improving my development skills.
