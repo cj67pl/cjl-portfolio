@@ -5,6 +5,7 @@ import {
 	Sprout,
 	NotebookPen,
 	FlaskConical,
+	Heart,
 } from "lucide-react";
 
 import { FaGithub } from "react-icons/fa";
@@ -65,5 +66,14 @@ export const workspaceTiles = [
 		icon: FaGithub,
 		description: "Source code, repositories, and project history.",
 		className: "t-github",
+	},
+
+	{
+		id: "stats",
+		name: "LIKE THIS PORTFOLIO",
+		icon: Heart,
+		description:
+			"If you found this portfolio useful or interesting, leave a like.",
+		className: "t-stats",
 	},
 ];

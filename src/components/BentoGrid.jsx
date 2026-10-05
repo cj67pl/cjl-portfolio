@@ -1,4 +1,5 @@
 import BentoTile from "./BentoTile";
+// import PortfolioStats from "./PortfolioStats";
 import { workspaceTiles } from "../data/workspace";
 
 function BentoGrid({ onOpenFolder }) {
@@ -11,6 +12,8 @@ function BentoGrid({ onOpenFolder }) {
                     onOpenFolder={onOpenFolder}
                 />
             ))}
+
+            {/* <PortfolioStats /> */}
         </main>
     );
 }

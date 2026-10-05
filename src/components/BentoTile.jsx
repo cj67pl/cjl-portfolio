@@ -1,4 +1,10 @@
+import PortfolioStats from "./PortfolioStats";
+
 function BentoTile({ tile, onOpenFolder }) {
+    if (tile.id === "stats") {
+        return <PortfolioStats />;
+    }
+
     const Icon = tile.icon;
 
     function handleClick(event) {
@@ -17,19 +23,14 @@ function BentoTile({ tile, onOpenFolder }) {
             onClick={handleClick}
         >
             <span className="ico">
-                <Icon
-                    size={22}
-                    strokeWidth={1.8}
-                />
+                <Icon size={22} strokeWidth={1.8} />
             </span>
 
             <h2>{tile.name}</h2>
 
             <p>{tile.description}</p>
 
-            <span className="open">
-                open →
-            </span>
+            <span className="open">open →</span>
         </button>
     );
 }

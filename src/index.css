@@ -552,7 +552,7 @@ p {
 
 /* Desktop Bento layout */
 
-@media (min-width: 760px) {
+/* @media (min-width: 760px) {
   .grid {
     grid-template-columns:
       repeat(4, 1fr);
@@ -600,8 +600,69 @@ p {
   .t-projects p {
     font-size: 14px;
   }
-}
+} */
 
+
+@media(min-width:760px) {
+	.grid {
+		grid-template-columns: repeat(5, 1fr);
+		grid-auto-rows: 150px;
+	}
+
+	.t-projects {
+		grid-column: 1/3;
+		grid-row: 1/3;
+	}
+
+	.t-about {
+		grid-column: 3/5;
+	}
+
+	.t-tech {
+		grid-column: 3;
+	}
+
+	.t-learning {
+		grid-column: 3/5;
+		grid-row: 2/3;
+		
+	}
+
+	.t-notes {
+		grid-column: 1/3;
+		grid-row: 3/4;
+	}
+	
+	.t-stats {
+		grid-column: 5;
+		grid-row: 3;
+		
+
+	}
+
+	.t-lab {
+		grid-column: 5;
+		grid-row: 1/3;
+	}
+
+	.t-github {
+		grid-column: 4;
+	}
+
+	.tile {
+		min-height: 0;
+	}
+
+	.t-projects h2 {
+		font-size: 17px;
+	}
+
+	.t-projects p {
+		font-size: 14px;
+	}
+
+	
+}
 
 /* .lab-preview {
 	width: 100%;
@@ -741,4 +802,86 @@ p {
 
 .tech-card:hover .tech-icon {
   transform: scale(1.08) rotate(-3deg);
+}
+
+.stats-tile {
+	position: relative;
+	background: var(--card);
+	border: 1px solid var(--bd);
+	border-radius: 16px;
+	padding: 18px;
+	box-shadow: var(--sh);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: default;
+	overflow: hidden;
+}
+
+.stats-tile::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 16px;
+	width: 46px;
+	height: 5px;
+	background: var(--pri);
+	border-radius: 0 0 5px 5px;
+	opacity: .7;
+}
+
+.stats-count {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.stats-count span {
+	font-size: 16px;
+	color: var(--mut);
+}
+
+.stats-count strong {
+	font-size: 26px;
+	font-weight: 700;
+	color: var(--txt);
+}
+
+.stats-like {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.stats-heart {
+	border: 0;
+	background: transparent;
+	color: var(--pri);
+	padding: 4px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.stats-heart:hover {
+	transform: scale(1.12);
+}
+
+.stats-heart.liked {
+	color: var(--pri);
+}
+
+.stats-heart {
+	cursor: pointer;
+}
+
+.stats-heart:disabled {
+	cursor: default;
+}
+
+@media(min-width:760px) {
+	.stats-tile {
+		grid-column: 1;
+	}
 }
