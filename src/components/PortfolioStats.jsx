@@ -75,6 +75,33 @@ function PortfolioStats() {
         recordVisit();
     }, []);
 
+    useEffect(() => {
+        async function refreshStats() {
+            try {
+                const response = await fetch("/api/stats");
+
+                if (!response.ok) {
+                    throw new Error("Failed to refresh stats");
+                }
+
+                const data = await response.json();
+
+                setStats(data);
+            } catch (error) {
+                console.error(
+                    "Failed to refresh portfolio stats:",
+                    error
+                );
+            }
+        }
+
+        const interval = setInterval(refreshStats, 10000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
+
     async function handleLike() {
         if (liked) return;
 
