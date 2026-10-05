@@ -41,7 +41,7 @@ function Header({ theme, setTheme, onContact }) {
                 </a>
 
                 <a
-                    href="https://github.com/"
+                    href="https://github.com/cj67pl"
                     target="_blank"
                     rel="noreferrer"
                     className="btn"

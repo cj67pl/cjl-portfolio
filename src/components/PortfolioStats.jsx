@@ -38,7 +38,7 @@ function PortfolioStats() {
                 return;
             }
 
-            // Set this immediately to prevent duplicate requests
+            // prevent duplicate requests
             sessionStorage.setItem("portfolio-visited", "true");
 
             try {
@@ -58,10 +58,10 @@ function PortfolioStats() {
 
                 const data = await response.json();
 
-                // Use the updated database values
+                // updated database values
                 setStats(data);
             } catch (error) {
-                // Allow another attempt if the request failed
+                // another attempt if the request failed
                 sessionStorage.removeItem("portfolio-visited");
 
                 console.error(
